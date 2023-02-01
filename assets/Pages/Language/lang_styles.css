@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    height: 60px;
+    background-color: #fff;
+    display: flex;   /*for aligning the contents in a line*/
+    align-items: center;   /*for aligning the items to the center*/
+    justify-content: space-between;  /*space between the contents*/
+    padding: 0px 50px 0px 100px;
+}
+
+nav .logo {
+    font-size: 25px;
+    font-weight: 600;   /*for font weight*/
+    color: rgb(81, 73, 73);
+}
+
+nav ul {
+    display: flex;   
+    list-style: none;   /*for removing the points symbol from the list items*/
+}
+
+nav ul li {
+    margin: 0 5px; /*for space b/w the item lists*/
+}
+
+nav ul li a {
+    color: #1db17b;
+    text-decoration: none;  /*for removing the underline of the anchor tag*/
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;   /*for space b/w the letters*/
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #fff;
+    background: #1db17b;
+}
+
+nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+#click {
+    display: none;
+}
+
+/* On screens that are 940px or less, set the below properties */
+@media (max-width: 940px) {
+    nav .menu-btn i{
+        color: #1b1b11;
+        font-size: 22px;
+        cursor: pointer;
+        display: block;
+    }
+
+    #click:checked ~ .menu-btn i:before {
+        content: "\f00d";
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;  
+        background: #fff;
+        height: 100vh; /*100VH would represent 100% of the viewport’s height*/
+        width: 100%;  /*fullscreen width*/
+        display: block; /*A block-level element always starts on a new line and takes up the full width available */
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked ~ ul {
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 40px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        display: block;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+        color: #1b1b11;
+        background: none;
+    }
+}
+
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*------------------------ Content container  --------------------------- */
+
+.content_container {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 580px);
+    grid-template-rows: repeat(2, 280px);
+    text-align: center;
+
+    justify-content: center;
+    grid-gap: 30px;
+
+}
+
+.item1 {
+    margin: 30px 0 0 0;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    color: #313131;
+ 
+  padding: 50px;
+}
+.item2 {
+    margin: 30px 0 0 0;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    color: #313131;
+    padding: 50px;
+}
+.item3 {
+    margin: 15px 0 15px 0;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    color: #313131;
+    padding: 50px;
+}
+.item4 {
+    margin: 15px 0 15px 0;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    color: #313131;
+    padding: 50px;
+}
+
+
+.btn {
+    background: #1db17b;
+    top:50%;    
+    color: #fff;
+    border:none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: #04AA6D;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+
+
+  /*------------------- Footer ------------------------------------ */
+footer {
+    color: #1b1b11;
+}
+
+
+.page-footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    height: 150px;
+    
+    grid-template-rows: 1fr;
+}
+
+.footer-logo {
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+    color: #1b1b11;
+}
+
+.footer-about {
+    margin: 10px;
+    font-weight: 600;
+
+}
+
+.footer-about ul {
+    list-style: none;
+}
+
+.footer-about ul li a{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 0;
+    color: #1b1b11;
+}
+
+
+.footer-follow_us {
+    margin: 10px;
+}
+
+.footer-follow_us ul {
+    list-style: none;
+}
+
+.footer-follow_us ul li a{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 0;
+    color: #1b1b11;
+}
+
+
